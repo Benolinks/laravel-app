@@ -33,17 +33,31 @@
 
   <!-- Product Grid -->
 
-
+@foreach ($userproducts as $userproduct)
 <div class="product-grid">
   <div class="card">
     <div class="product-image">
-      <img src="/images/IMG 1.png" alt="Running Shoe">
+      <img src="{{ asset('storage/'.$userproduct->product->image) }}" alt="">
     </div>
-    <h3 class="product-title">Running Shoe</h3>
-    <p class="product-price">$120</p>
-  </div>
 
-  <div class="card">
+    <h3 class="product-title">
+        @if ($userproduct->product)
+          {{ $userproduct->product->product_name }}
+        @endif
+    </h3>
+
+    <p class="product-price">
+       @if ($userproduct->product)
+         {{ $userproduct->product->product_price }}
+        @endif
+    </p>
+  </div>
+</div>
+@endforeach
+
+
+
+  {{-- <div class="card">
     <div class="product-image">
       <img src="/images/IMG 1.png" alt="Sneakers">
     </div>
@@ -57,7 +71,7 @@
     </div>
     <h3 class="product-title">Sports Shoe</h3>
     <p class="product-price">$150</p>
-  </div>
+  </div> --}}
 
   <!-- Add more cards as needed -->
 </div>

@@ -14,8 +14,8 @@ class UserProduct extends Model
         
     ];
 
-    public function products() :BelongsTo{
-
-    return $this->belongsTo(Product::class);
+   public function product(): BelongsTo
+    {
+        return $this->belongsTo(Product::class);
     }
 }

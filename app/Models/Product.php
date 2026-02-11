@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Models\UserProduct;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Product extends Model
 {
@@ -19,9 +20,9 @@ class Product extends Model
     ];
 
 
-    public function userProducts() :HasMany 
+     public function userProduct(): HasOne
     {
-        return $this->hasMany(UserProduct::class);
+        return $this->hasOne(UserProduct::class);
     }
 
 

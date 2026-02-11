@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\UserProduct;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -43,7 +44,9 @@ class UserController extends Controller
         }
 
         public function home(){
-            return view('user.home');
+            $userproducts = UserProduct::with('products')->get();
+            return view('user.home', compact('userproducts'));
+            
         }
 
 
