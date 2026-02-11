@@ -437,12 +437,12 @@
 
 .luxury-btn {
   border-radius: 50px;
-  background-color: #6f42c1;
+   background-color: #642393;
   border: none;
 }
 
 .luxury-btn:hover {
-  background-color: #d63384;
+  background-color: #6f42c1;
 }
 
 
@@ -739,3 +739,139 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+
+/* ==========USER HOME PAGE =============== */
+
+
+/* General */
+.luxury-bg-light {
+  background-color: #f8f9fa;
+  font-family: 'Poppins', Arial, sans-serif;
+  color: #333;
+}
+
+/* Navbar */
+.luxury-navbar .navbar-brand {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+.luxury-navbar .nav-link {
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.luxury-navbar .nav-link:hover {
+  color: #f8d64e !important; /* gold accent */
+}
+
+/* Hero Banner */
+.luxury-banner {
+  background: linear-gradient(120deg, #e2d2d0, #6c214a);
+  min-height: 500px;
+  padding: 4rem 2rem;
+}
+.luxury-banner h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+.luxury-banner p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+.luxury-banner-img {
+  border-radius: 10px;
+}
+.luxury-btn {
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+}
+
+/* Product Cards */
+.luxury-card {
+  border: none;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.luxury-card:hover {
+  transform: translateY(-5px);
+}
+.luxury-card-img {
+  border-radius: 8px 8px 0 0;
+}
+.luxury-card .card-title {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+.luxury-card .card-text {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Footer */
+.luxury-footer {
+  background-color: #111;
+}
+.luxury-footer h5 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.luxury-footer p,
+.luxury-footer a {
+  font-size: 0.9rem;
+}
+.luxury-footer a:hover {
+  color: #f8d64e;
+}
+
+
+/* cards from products  */
+
+
+/* Grid container */
+.product-grid {
+  display: grid;
+  gap: 20px; /* space between cards */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  padding: 20px;
+}
+
+/* Card styling */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 10px;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Product image container */
+.product-image {
+  width: 100%; /* fills card width */
+  aspect-ratio: 1/1; /* square box */
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Image styling */
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Product text */
+.product-title {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.product-price {
+  font-weight: bold;
+  color: #333;
+}

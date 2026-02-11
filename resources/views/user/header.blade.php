@@ -21,6 +21,7 @@
     @vite(['resources/css/style.css', 'resources/js/main.js'])
 
 
+
     <title>LUXURY HAIR</title>
 </head> 
 

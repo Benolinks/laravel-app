@@ -472,6 +472,7 @@ font-family: 'Playfair Display', serif;
 font-size: 32px;
 color: #4b1f36;
 margin-bottom: 30px;
+text-decoration: none;
 }
 
 
@@ -531,3 +532,93 @@ padding: 15px;
 width: 90%;
 margin: 6rem auto;
 }
+
+
+
+/* ==================ADMIN PRODUCT  IMAGE DESIGN====================== */
+
+.admin-product-image {
+width: max(30%, 70px);
+
+border-radius: 12px;
+height: 25%;
+}
+
+.product-image{
+width: 100%;
+height: 100%;
+margin: 0 auto;
+gap: calc(20px -10%);
+}
+
+.product-img {
+  width: clamp(20%, 50px, 100px);
+  aspect-ratio: 1/1;   
+  overflow: hidden;
+  margin: 0 auto;
+
+}
+
+.product-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  
+}
+
+
+/* =======================SECTION FOR SWEET ALERT=================================== */
+
+       .confirmDelete {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+   display: none;
+  
+}
+
+
+.alert-box {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.alert-box h4 {
+    margin-bottom: 10px;
+}
+
+.alert-box p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.alert-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn_delete {
+    background: crimson;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn_cancel {
+    background: gray;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+/* ======================= END SECTION FOR SWEET ALERT=================================== */

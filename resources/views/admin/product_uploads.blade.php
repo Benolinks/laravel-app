@@ -27,23 +27,33 @@
 
 
 <div class="upload-card">
-<form>
+<form action="{{ route('admin.upload-product') }}" method="POST" enctype="multipart/form-data">
+ @csrf
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
+   
 
 
 <label>Product Name</label>
-<input type="text" class="form-control">
+<input type="text" class="form-control" name="product_name">
 
 
 <label>Price (₦)</label>
-<input type="number" class="form-control">
-
+<input type="number" class="form-control" name="price">
 
 <label>Description</label>
-<textarea class="form-control"></textarea>
-
+<textarea class="form-control" name="description"></textarea>
 
 <label>Hair Length</label>
-<select class="form-control">
+<select class="form-control" name="length">
 <option>10 inches</option>
 <option>12 inches</option>
 <option>14 inches</option>
@@ -53,10 +63,12 @@
 
 
 <label>Product Image</label>
-<input type="file" class="form-control">
+<input type="file" class="form-control" name="image">
 
 
 <button class="primary-btn">Upload Product</button>
+
+
 
 
 </form>

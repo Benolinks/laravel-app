@@ -41,4 +41,10 @@ class UserController extends Controller
         public function payment_success(){
             return view('user.payment_success');
         }
+
+        public function home(){
+            return view('user.home');
+        }
+
+
 }

@@ -34,6 +34,17 @@ Route::get('/admin/payment',[AdminController::class, 'payment'])->name('admin.pa
 
 Route::get('/admin/product_uploads',[AdminController::class, 'product_uploads'])->name('admin.product_uploads');
 
+Route::post('/admin/upload-product', [AdminController::class, 'upload_product'])->name('admin.upload-product');
+
+Route::get('/admin/product_edit/{product}',[AdminController::class, 'product_edit'])->name('admin.product_edit');
+
+Route::delete('/admin/product_delete/{product}', [AdminController::class, 'product_delete'])->name('admin.product_delete');
+
+
+
+
+// ==================USER CONTROLLER =============================
+
 
 Route::get('/user/index',[UserController::class, 'index'])->name('user.index');
 
@@ -51,6 +62,8 @@ Route::get('/user/trackorder', [UserController::class, 'trackorder'])->name('use
 Route::get('/user/payment_failed', [UserController::class, 'payment_failed'])->name('user.payment_failed');
 
 Route::get('/user/payment_success', [UserController::class, 'payment_success'])->name('user.payment_success');
+
+Route::get('/user/home', [UserController::class, 'home'])->name('user.home');
 
 
 require __DIR__.'/auth.php';

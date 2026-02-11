@@ -31,37 +31,43 @@
 
 
 <div class="upload-card">
-<form>
+<form  method="POST" enctype="multipart/form-data">
+    @csrf
+    @method('PUT')
 
 
 <label>Product Name</label>
-<input type="text" class="form-control">
+<input type="text" class="form-control" value="{{ $product->product_name }}">
 
 
 <label>Price (₦)</label>
-<input type="number" class="form-control">
+<input type="number" class="form-control" value="{{ $product->price }}">
 
 
 <label>Description</label>
-<textarea class="form-control"></textarea>
-
+<textarea class="form-control">{{ $product->description }}</textarea>
 
 <label>Hair Length</label>
-<select class="form-control">
-<option>10 inches</option>
-<option>12 inches</option>
-<option>14 inches</option>
-<option>16 inches</option>
-<option>20+ inches</option>
+<select class="form-control" name="length" value="{{ $product->length }}">
+<option value="10 inches" {{ $product->length == '10 inches' ? 'selected' : '' }}>10 inches</option>
+<option value="12 inches" {{ $product->length == '12 inches' ? 'selected' : '' }}>12 inches</option>
+<option value="14 inches" {{ $product->length == '14 inches' ? 'selected' : '' }}>14 inches</option>
+<option value="16 inches" {{ $product->length == '16 inches' ? 'selected' : '' }}>16 inches</option>
+<option value="20+ inches" {{ $product->length == '20+ inches' ? 'selected' : '' }}>20+ inches</option>
 </select>
+
+
+<div class="product-img mt-3 mb-3">
+    <img src="{{ asset('storage/'.$product->image) }}" alt="">
+</div>
+
 
 
 <label>Product Image</label>
 <input type="file" class="form-control">
 
 
-<button class="primary-btn">Upload Product</button>
-
+<button class="primary-btn">Update Product</button>
 
 </form>
 </div>
